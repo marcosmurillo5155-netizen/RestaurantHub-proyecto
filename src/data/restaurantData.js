@@ -1,26 +1,16 @@
 export const RESTAURANT_INFO = {
-  nombre: "RestaurantHub",
-  slogan: "Tu Hub de Comida Favorita",
-  direccion: "Calle Principal 123, Guadalajara, Jalisco",
-  telefono: "+52 333 123 456",
-  email: "info@restauranthub.com",
+  nombre: 'RestaurantHub',
+  slogan: 'Tu Hub de Comida Favorita',
+  descripcion:
+    'RestaurantHub es una aplicación móvil para consultar el menú, revisar platillos, simular pedidos, hacer reservaciones y conocer la ubicación del restaurante.',
+  direccion: 'Av. Chapultepec 123, Guadalajara, Jalisco',
+  telefono: '33 1234 5678',
+  email: 'contacto@restauranthub.com',
+  calificacion: '4.8',
+  resenas: 245,
   horario: {
-    lunes_viernes: "11:00 - 23:00",
-    sabado: "11:00 - 00:00",
-    domingo: "12:00 - 22:00"
+    lunes_viernes: '10:00 AM - 10:00 PM',
+    sabado: '11:00 AM - 11:00 PM',
+    domingo: '12:00 PM - 8:00 PM',
   },
-  ubicacion: {
-    latitud: 20.6597,
-    longitud: -103.2494
-  },
-  calificacion: 4.8,
-  resenas: 342,
-  descripcion: "Restaurante de comida variada con opciones para todos los gustos. Ofrecemos hamburguesas, pizzas, pastas, ensaladas y mucho más.",
 };
-
-export const HORARIOS_TABLA = [
-  { personas: 2, disponibilidad: '✅ Disponible' },
-  { personas: 4, disponibilidad: '✅ Disponible' },
-  { personas: 6, disponibilidad: '⚠️ Limitado' },
-  { personas: 8, disponibilidad: '❌ No disponible' },
-];
