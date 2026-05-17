@@ -26,13 +26,17 @@ const ReservationScreen = () => {
   };
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.content}
+      showsVerticalScrollIndicator={false}
+    >
       <View style={styles.card}>
         <Text style={styles.title}>📅 Reservar mesa</Text>
 
         <TextInput
           style={styles.input}
-          placeholder="Nombre"
+          placeholder="Nombre completo"
           value={nombre}
           onChangeText={setNombre}
         />
@@ -47,14 +51,14 @@ const ReservationScreen = () => {
 
         <TextInput
           style={styles.input}
-          placeholder="Fecha ejemplo: 20/05/2026"
+          placeholder="Fecha: 20/05/2026"
           value={fecha}
           onChangeText={setFecha}
         />
 
         <TextInput
           style={styles.input}
-          placeholder="Hora ejemplo: 7:30 PM"
+          placeholder="Hora: 7:30 PM"
           value={hora}
           onChangeText={setHora}
         />
@@ -73,12 +77,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.background,
+  },
+  content: {
     padding: 15,
+    paddingBottom: 60,
   },
   card: {
     backgroundColor: COLORS.card,
     padding: 20,
-    borderRadius: 12,
+    borderRadius: 16,
     ...SHADOWS.small,
   },
   title: {

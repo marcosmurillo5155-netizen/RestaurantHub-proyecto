@@ -1,5 +1,15 @@
 import { useState } from 'react';
-import { FlatList, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import {
+  FlatList,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+
 import { CATEGORIAS, MENU_DATA } from '../data/menuData';
 import { COLORS, SHADOWS } from '../utils/colors';
 
@@ -14,15 +24,27 @@ const MenuScreen = ({ navigation }) => {
   });
 
   const renderPlato = ({ item }) => (
-    <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Detail', { plato: item })}>
+    <TouchableOpacity
+      style={styles.card}
+      onPress={() => navigation.navigate('Detail', { plato: item })}
+      activeOpacity={0.9}
+    >
       <Image source={{ uri: item.imagen }} style={styles.image} />
+
       <View style={styles.info}>
         <Text style={styles.name}>{item.nombre}</Text>
-        <Text style={styles.description} numberOfLines={2}>{item.descripcion}</Text>
+        <Text style={styles.description} numberOfLines={2}>
+          {item.descripcion}
+        </Text>
+
         <View style={styles.row}>
           <Text style={styles.price}>${item.precio}</Text>
           <Text style={styles.rating}>⭐ {item.rating}</Text>
         </View>
+      </View>
+
+      <View style={styles.addCircle}>
+        <Text style={styles.addText}>+</Text>
       </View>
     </TouchableOpacity>
   );
@@ -31,12 +53,17 @@ const MenuScreen = ({ navigation }) => {
     <View style={styles.container}>
       <TextInput
         style={styles.search}
-        placeholder="Buscar platillo..."
+        placeholder="🔍 Buscar platillo..."
         value={busqueda}
         onChangeText={setBusqueda}
+        placeholderTextColor={COLORS.textLighter}
       />
 
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categories}>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.categories}
+      >
         {CATEGORIAS.map((cat) => (
           <TouchableOpacity
             key={cat}
@@ -64,16 +91,24 @@ const MenuScreen = ({ navigation }) => {
 export default MenuScreen;
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.background },
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.background,
+  },
   search: {
     backgroundColor: COLORS.white,
     margin: 15,
-    padding: 14,
-    borderRadius: 12,
+    padding: 15,
+    borderRadius: 18,
     borderWidth: 1,
     borderColor: COLORS.border,
+    fontSize: 15,
+    ...SHADOWS.small,
   },
-  categories: { paddingHorizontal: 10, marginBottom: 10 },
+  categories: {
+    paddingHorizontal: 12,
+    marginBottom: 8,
+  },
   categoryButton: {
     backgroundColor: COLORS.white,
     paddingHorizontal: 16,
@@ -83,24 +118,79 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.border,
   },
-  categoryActive: { backgroundColor: COLORS.primary },
-  categoryText: { color: COLORS.text, fontWeight: 'bold' },
-  categoryTextActive: { color: COLORS.white },
-  list: { padding: 15 },
+  categoryActive: {
+    backgroundColor: COLORS.primary,
+    borderColor: COLORS.primary,
+  },
+  categoryText: {
+    color: COLORS.textLight,
+    fontWeight: 'bold',
+  },
+  categoryTextActive: {
+    color: COLORS.white,
+  },
+  list: {
+    padding: 15,
+    paddingBottom: 60,
+  },
   card: {
     flexDirection: 'row',
     backgroundColor: COLORS.card,
-    borderRadius: 16,
+    borderRadius: 22,
     marginBottom: 15,
-    overflow: 'hidden',
-    ...SHADOWS.small,
+    padding: 10,
+    alignItems: 'center',
+    ...SHADOWS.medium,
   },
-  image: { width: 115, height: 115 },
-  info: { flex: 1, padding: 12 },
-  name: { fontSize: 18, fontWeight: 'bold', color: COLORS.text },
-  description: { color: COLORS.textLight, marginVertical: 6 },
-  row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  price: { color: COLORS.primary, fontSize: 18, fontWeight: 'bold' },
-  rating: { color: COLORS.textLight },
-  empty: { textAlign: 'center', marginTop: 40, color: COLORS.textLight },
+  image: {
+    width: 95,
+    height: 95,
+    borderRadius: 18,
+  },
+  info: {
+    flex: 1,
+    paddingHorizontal: 13,
+  },
+  name: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: COLORS.text,
+  },
+  description: {
+    color: COLORS.textLight,
+    marginVertical: 6,
+    fontSize: 13,
+    lineHeight: 18,
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  price: {
+    color: COLORS.primary,
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  rating: {
+    color: COLORS.textLight,
+  },
+  addCircle: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    backgroundColor: '#FFE5EC',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  addText: {
+    color: COLORS.primary,
+    fontSize: 26,
+    fontWeight: 'bold',
+    marginTop: -3,
+  },
+  empty: {
+    textAlign: 'center',
+    marginTop: 40,
+    color: COLORS.textLight,
+  },
 });

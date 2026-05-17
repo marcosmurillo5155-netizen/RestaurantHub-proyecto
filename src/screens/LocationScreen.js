@@ -1,10 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 import { COLORS, SHADOWS } from '../utils/colors';
 
 const LocationScreen = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.content}
+      showsVerticalScrollIndicator={false}
+    >
       <View style={styles.card}>
         <Text style={styles.title}>📍 Ubicación y contacto</Text>
 
@@ -27,18 +31,42 @@ const LocationScreen = () => {
         <Text style={styles.mapText}>🗺️ Mapa simulado</Text>
         <Text style={styles.mapSub}>Guadalajara, Jalisco</Text>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
 export default LocationScreen;
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.background, padding: 15 },
-  card: { backgroundColor: COLORS.card, padding: 20, borderRadius: 16, ...SHADOWS.small },
-  title: { fontSize: 26, fontWeight: 'bold', marginBottom: 15, color: COLORS.text },
-  label: { fontWeight: 'bold', marginTop: 10, color: COLORS.text },
-  text: { color: COLORS.textLight, marginTop: 3 },
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.background,
+  },
+  content: {
+    padding: 15,
+    paddingBottom: 60,
+  },
+  card: {
+    backgroundColor: COLORS.card,
+    padding: 20,
+    borderRadius: 16,
+    ...SHADOWS.small,
+  },
+  title: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    marginBottom: 15,
+    color: COLORS.text,
+  },
+  label: {
+    fontWeight: 'bold',
+    marginTop: 10,
+    color: COLORS.text,
+  },
+  text: {
+    color: COLORS.textLight,
+    marginTop: 3,
+  },
   mapFake: {
     backgroundColor: '#DDEEFF',
     height: 190,
@@ -47,6 +75,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  mapText: { fontSize: 24, fontWeight: 'bold', color: COLORS.text },
-  mapSub: { color: COLORS.textLight, marginTop: 6 },
+  mapText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: COLORS.text,
+  },
+  mapSub: {
+    color: COLORS.textLight,
+    marginTop: 6,
+  },
 });
