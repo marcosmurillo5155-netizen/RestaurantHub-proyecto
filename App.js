@@ -27,7 +27,7 @@ export default function App() {
       >
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'RestaurantHub' }} />
         <Stack.Screen name="Menu" component={MenuScreen} options={{ title: 'Menú' }} />
-        <Stack.Screen name="Detail" component={DetailScreen} options={{ title: 'Detalle del platillo' }} />
+        <Stack.Screen name="Detail" component={DetailScreen} options={{ title: 'Detalle' }} />
         <Stack.Screen name="Cart" component={CartScreen} options={{ title: 'Carrito' }} />
         <Stack.Screen name="Orders" component={OrdersScreen} options={{ title: 'Pedidos' }} />
         <Stack.Screen name="Reservation" component={ReservationScreen} options={{ title: 'Reservación' }} />

@@ -2,7 +2,7 @@ export const RESTAURANT_INFO = {
   nombre: 'RestaurantHub',
   slogan: 'Tu Hub de Comida Favorita',
   descripcion:
-    'RestaurantHub es una aplicación móvil para consultar el menú, revisar platillos, simular pedidos, hacer reservaciones y conocer la ubicación del restaurante.',
+    'Aplicación móvil para consultar menú, revisar platillos, simular pedidos, hacer reservaciones y conocer la ubicación del restaurante.',
   direccion: 'Av. Chapultepec 123, Guadalajara, Jalisco',
   telefono: '33 1234 5678',
   email: 'contacto@restauranthub.com',

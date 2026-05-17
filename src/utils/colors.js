@@ -9,6 +9,7 @@ export const COLORS = {
   white: '#FFFFFF',
   border: '#E0E0E0',
   success: '#2A9D8F',
+  danger: '#E63946',
 };
 
 export const SHADOWS = {

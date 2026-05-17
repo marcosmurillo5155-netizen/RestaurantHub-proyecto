@@ -1,9 +1,4 @@
-export const CATEGORIAS = [
-  'Hamburguesas',
-  'Pizzas',
-  'Bebidas',
-  'Postres',
-];
+export const CATEGORIAS = ['Todos', 'Hamburguesas', 'Pizzas', 'Bebidas', 'Postres'];
 
 export const MENU_DATA = [
   {
