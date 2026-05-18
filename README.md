@@ -1,43 +1,99 @@
-# RestaurantHub-proyecto
-# RestaurantHub
+#    RestaurantHub
 
-RestaurantHub es una aplicación móvil desarrollada con React Native y Expo para consultar el menú de un restaurante, revisar detalles de platillos, simular pedidos, realizar reservaciones y consultar información de contacto.
+RestaurantHub es una aplicación móvil desarrollada con React Native y Expo que permite a los usuarios consultar un menú digital, visualizar detalles de platillos, agregar productos a un carrito, realizar reservaciones y consultar información del restaurante mediante una interfaz moderna y amigable.
 
-## Problema que resuelve
+---
 
-Muchos restaurantes necesitan una forma sencilla de mostrar sus productos, organizar reservaciones y presentar información clara a sus clientes. Esta aplicación simula una solución móvil para mejorar la experiencia del usuario.
+# Características principales
 
-## Funcionalidades principales
-
-- Pantalla principal tipo dashboard.
-- Menú con categorías.
-- Detalle de platillos.
-- Carrito simulado.
+- Inicio de sesión simulado.
+- Dashboard principal interactivo.
+- Menú dinámico con categorías.
+- Búsqueda de platillos.
+- Vista detallada de productos.
+- Carrito funcional con múltiples productos.
+- Simulación de pedidos.
 - Historial de pedidos.
-- Formulario de reservación.
-- Ubicación y contacto.
-- Información del proyecto.
+- Reservaciones.
+- Información de ubicación y contacto.
+- Perfil de usuario.
+- Diseño moderno con temática pastel.
 
-## Tecnologías utilizadas
+---
+
+# Problema que resuelve
+
+Muchos restaurantes requieren soluciones digitales para mostrar sus productos y mejorar la interacción con los clientes. RestaurantHub propone una experiencia móvil sencilla y atractiva para consultar menús, realizar pedidos y gestionar reservaciones desde una aplicación móvil.
+
+---
+
+# Tecnologías utilizadas
 
 - React Native
 - Expo
 - JavaScript
 - React Navigation
+- Context API
 - GitHub
-- ChatGPT como herramienta de apoyo con IA
 
-## Uso de Inteligencia Artificial
+---
 
-Se utilizó inteligencia artificial para apoyar en la corrección de errores, organización de navegación, documentación del proyecto y mejora de componentes.
+# Uso de Inteligencia Artificial
 
-## Integrantes del equipo
+La Inteligencia Artificial fue utilizada como apoyo durante el desarrollo del proyecto para:
 
-- Integrante 1:
-- Integrante 2:
-- Integrante 3:
+- Generación de componentes.
+- Corrección de errores.
+- Mejora visual de interfaces.
+- Organización de navegación.
+- Implementación de funcionalidades.
+- Creación de documentación.
 
-## Instalación
+---
 
-```bash
-npm install
+# Funcionalidades implementadas
+
+## Login
+El usuario puede iniciar sesión mediante una pantalla visual simulada.
+
+## Menú
+Visualización de platillos organizados por categorías con sistema de búsqueda.
+
+## Detalle de platillo
+Cada producto cuenta con:
+- Imagen
+- Precio
+- Descripción
+- Ingredientes
+- Tiempo de preparación
+
+## Carrito funcional
+El usuario puede:
+- Agregar múltiples productos
+- Eliminar productos
+- Seguir comprando
+- Visualizar subtotal y total
+- Simular pago
+
+## Reservaciones
+Formulario funcional para reservar mesas.
+
+## Historial
+Pantalla de historial de pedidos simulados.
+
+## Ubicación
+Pantalla con información del restaurante y ubicación simulada.
+
+##  Perfil
+Información del usuario y datos del proyecto.
+
+---
+
+# Estructura del proyecto
+
+```txt
+src/
+ ├── context/
+ ├── data/
+ ├── screens/
+ └── utils/
